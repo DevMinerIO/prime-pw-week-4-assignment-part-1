@@ -62,7 +62,7 @@ function getLast( array ) {
 return console.log(toReturn);
 }
 console.log("question #6");
-//let testArray = ["soda", "pop"];
+let testArray = ["soda", "pop"];
 getLast(testArray);
 
 // 7. Function to find a value in an array. Return true if the 
