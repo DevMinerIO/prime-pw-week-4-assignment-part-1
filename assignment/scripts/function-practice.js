@@ -22,21 +22,20 @@ console.log("Question #2");
 helloName("Tim");
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber ) {
-  // return firstNumber + secondNumber;
-  return firstNumber + 5;
+function addNumbers( firstNumber, secondNumber ) {
+  return firstNumber + secondNumber;
 }
 console.log("question #3");
-console.log(addNumbers(3));
+console.log(addNumbers(3, 6));
 
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
-let result = 4 * 2 * 3;
-return result;
+function multiplyThree(a, b ,c ){
+let answer = a * b * c;
+return answer;
 }
 console.log("Question #4");
-console.log(multiplyThree());
+console.log(multiplyThree(2, 4, 6));
 
 
 // 5. Function that will return true if a number is positive, 
@@ -59,10 +58,11 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 //    array is empty, return `undefined`.
 function getLast( array ) {
   let toReturn = array.pop();
-return console.log(toReturn);
+return toReturn;
 }
 console.log("question #6");
 let testArray = ["soda", "pop"];
+console.log("testing getLast Function, last element is:" , getLast(testArray));
 getLast(testArray);
 
 // 7. Function to find a value in an array. Return true if the 
@@ -70,7 +70,7 @@ getLast(testArray);
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find( value, array ){
   for (let i = 0; i< array.length; i++) {
-    if (array(i) === value) {
+    if (array[i] === value) {
       return true;
     }
   }
