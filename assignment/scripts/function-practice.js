@@ -69,14 +69,19 @@ getLast(testArray);
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find( value, array ){
+  let hasValue = false;
   for (let i = 0; i< array.length; i++) {
     if (array[i] === value) {
-      return true;
+      hasValue = true;
+      return hasValue;
     }
   }
-  return false;
+  return hasValue;
 }
 
+let testArrayTwo = [2, 4, 6, 8];
+console.log("should return false" , find(1, testArrayTwo));
+console.log("Should return true" , find(2, testArrayTwo));
 // ----------------------
 // Stretch Goals
 // ----------------------
@@ -85,8 +90,8 @@ function find( value, array ){
 function isFirstLetter(letter, string) {
 
 }
-console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
-console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
+//console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
+//console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll( ) {
